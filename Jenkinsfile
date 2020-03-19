@@ -10,7 +10,7 @@ pipeline {
       
       stage('newman') {
             steps {
-                sh 'newman run Umair_Restful_Booker.postman_collection.json --environment Restful_Booker.postman_environment.json --reporters junit'
+                sh 'newman run Umair_Restful_Booker.postman_collection.json --Umair_Restful_Booker.postman_environment.json --reporters junit'
             }
             post {
                 always {
