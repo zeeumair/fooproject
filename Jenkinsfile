@@ -35,7 +35,7 @@ pipeline {
         }
         stage('robot') {
             steps {
-                sh 'robot -d results --variable BROWSER:headlesschrome IfotivBooking.robot'
+                sh 'robot -d results --variable BROWSER:headlesschrome IfotivBooking.robot,keywords.robot'
             }
             post {
                 always {
