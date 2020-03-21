@@ -7,6 +7,21 @@ pipeline {
             }
             
         }
+        stage('junit build') {
+            steps {
+                sh "mvn compile"
+            }
+        }
+        stage('junit test') {
+            steps {
+                sh "mvn test"
+            }
+            post {
+                always {
+                    junit '**/TEST*.xml'
+                }
+            }
+        }
       
       stage('newman') {
             steps {
@@ -38,10 +53,19 @@ pipeline {
                                   otherFiles          : "**/*.png,**/*.jpg",
                                 ]
                            )
+                          chuckNorris()
                     }
                 }
             }
         }
+    }
+    post {
+         always {
+            junit '**/TEST*.xml'
+            emailext attachLog: true, attachmentsPattern: '**/TEST*xml',
+            body: 'Bod-DAy!', recipientProviders: [culprits()], subject:
+            '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!'
+         }
     }
 }
 
