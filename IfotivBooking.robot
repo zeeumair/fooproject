@@ -8,8 +8,8 @@ Test Setup          Begin Web Test
 Test Teardown       End Web Test
 
 *** Variables ***
-${BROWSER}  =  chrome
-${URL}  =  http://renttal4.infotive.net
+  ${BROWSER}  =  chrome
+  ${URL}  =  http://renttal4.infotive.net
 
 *** Test Cases ***
 Creating the User
