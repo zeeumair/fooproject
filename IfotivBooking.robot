@@ -7,6 +7,10 @@ Library             SeleniumLibrary
 Test Setup          Begin Web Test
 Test Teardown       End Web Test
 
+*** Variables ***
+${Browser}  =  chrome
+${URL}  =  http://renttal4.infotive.net
+
 *** Test Cases ***
 Creating the User
         [Documentation]                 Creating the User
