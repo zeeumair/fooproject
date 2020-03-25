@@ -1,5 +1,6 @@
 *** Settings ***
 Library                 SeleniumLibrary
+
 *** Keywords ***
 
 Begin Web Test
@@ -9,6 +10,7 @@ Begin Web Test
         Verify Page Loaded
 Load Page
         Go To                                         ${URL}
+        
 Verify Page Loaded
         Wait Until Page Contains        Infotiv Car Rental
 End Web Test
