@@ -8,7 +8,7 @@ Test Setup          Begin Web Test
 Test Teardown       End Web Test
 
 *** Variables ***
-${Browser}  =  chrome
+${BROWSER}  =  chrome
 ${URL}  =  http://renttal4.infotive.net
 
 *** Test Cases ***
