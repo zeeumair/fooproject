@@ -52,8 +52,8 @@ Test with Invlaid Password
 Date Selection
 
         Click Element                        id:start
-        Press Keys                           id:start               {03/18}
-        Press Keys                           id:end                 {03/20}
+        Press Keys                           id:start               {03/28}
+        Press Keys                           id:end                 {03/30}
         Sleep                                3s
         Click Button                        id:continue
 
@@ -68,9 +68,9 @@ Booking a Car
         Sleep                                2s
         Click Element                        id:carSelect1
         ${pickup_date} =                    Get Text                id:startDate
-        Should Be Equal                     ${pickup_date}          Pickup date: 2020-03-18
+        Should Be Equal                     ${pickup_date}          Pickup date: 2020-03-28
         ${return_date} =                    Get Text                id:endDate
-        Should Be Equal                     ${return_date}          Return date: 2020-03-20
+        Should Be Equal                     ${return_date}          Return date: 2020-03-30
         Input Text                          id:cardNum              1234567887654321
         Input Text                          id:fullName             M Younas
         Select From List By Index            xpath://*[@id="confirmSelection"]/form/select[1]    2
