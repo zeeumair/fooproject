@@ -1,6 +1,6 @@
 *** Setting ***
 Documentation       Information about the Test Suite where five tests take place to check the functionality infotiv web page.
-Resource            ../Resources/keywords.robot
+Resource            keywords.robot
 Library             SeleniumLibrary
 Test Setup          Begin Web Test
 Test Teardown       End
