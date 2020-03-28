@@ -29,7 +29,7 @@ pipeline {
                     }
                 }
         }
-        stage('robot') {
+        stage('robot testss') {
             steps {
                 sh 'robot -d results --variable BROWSER:headlesschrome infotiveCarRental.robot'
             }
