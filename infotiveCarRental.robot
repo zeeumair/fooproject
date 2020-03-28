@@ -11,7 +11,7 @@ Test Teardown       End Web Test
 
 ${BROWSER}  =  chrome
 
-${URL}  =  http://rental.infotiv.net/
+${URL}  =  http://rental4.infotiv.net/
 
 
 *** Test Cases ***
