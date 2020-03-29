@@ -29,31 +29,27 @@ pipeline {
                     }
                 }
         }
-        stage('robot testss') {
-            steps {
-                sh 'robot -d results --variable BROWSER:headlesschrome infotiveCarRental.robot'
+        sh 'robot --variable BROWSER:headlesschrome -d results Tests'
             }
             post {
                 always {
                     script {
-                          step(
-                                [
-                                  $class              : 'RobotPublisher',
-                                  outputPath          : 'results',
-                                  outputFileName      : '**/output.xml',
-                                  reportFileName      : '**/report.html',
-                                  logFileName         : '**/log.html',
-                                  disableArchiveOutput: false,
-                                  passThreshold       : 50,
-                                  unstableThreshold   : 40,
-                                  otherFiles          : "**/*.png,**/*.jpg",
-                                ]
-                           )
-                  
+                        step(
+                            [
+                                $class              : 'RobotPublisher',
+                                outputPath          : 'results',
+                                outputFileName      : '/output.xml',
+                                reportFileName      : '/report.html',
+                                logFileName         : '/log.html',
+                                disableArchiveOutput: false,
+                                passThreshold       : 50,
+                                unstableThreshold   : 40,
+                                otherFiles          : "/.png,**/.jpg",
+                            ]
+                        )
                     }
                 }
             }
         }
     }
 }
-
