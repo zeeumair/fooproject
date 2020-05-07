@@ -29,7 +29,7 @@ pipeline {
                     }
                 }
         }
-       stage('robot testss') {
+       stage('robot tests') {
             steps {
                 sh 'robot -d results --variable BROWSER:headlesschrome infotiveCarRental.robot'
             }
@@ -55,9 +55,10 @@ pipeline {
             }
         }
     }
- post {
+       post {
          always {
             junit '**/TEST*.xml'
+             
            emailext attachLog: true, attachmentsPattern: '**/TEST*xml', body: '', recipientProviders: [culprits()], subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!'
          }
     }
