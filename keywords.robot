@@ -79,7 +79,7 @@ Booking Car
         ${return_date} =                    Get Text                id:endDate
         Should Be Equal                     ${return_date}          Return date: 2020-03-30
         Input Text                          id:cardNum              1234234534564567
-        Input Text                          id:fullName             M Farooqi
+        Input Text                          id:fullName             umair younas
         Select From List By Index            xpath://*[@id="confirmSelection"]/form/select[1]    2
         Select From List By Index            xpath://*[@id="confirmSelection"]/form/select[2]    5
         Input Text                           id:cvc               786
