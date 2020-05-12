@@ -9,9 +9,8 @@ Test Teardown       End Web Test
 
 *** Variables ***
 
-${BROWSER} = chrome
-
-${URL} = http://rental4.infotiv.net/
+${BROWSER} =        chrome
+${URL} =            http://rental4.infotiv.net/
 
 
 *** Test Cases ***
